@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmericaVirtualAPI</name>
+    </assembly>
+    <members>
+        <member name="T:AmericaVirtualAPI.Controllers.LogsController">
+            <summary>
+            controlador de logs
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.LogsController.#ctor(AmericaVirtualAPI.Services.IRepository{AmericaVirtualAPI.Models.Log})">
+            <summary>
+            Constructor del controlador
+            </summary>
+            <param name="logRepository">repositorio log</param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.LogsController.Post(AmericaVirtualAPI.Models.Log)">
+            <summary>
+            Alta de Logs
+            </summary>
+            <param name="value">Nuevo log</param>
+            <returns>log insertado</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.LogsController.GetLog(System.Int64)">
+            <summary>
+            Obtiene log dado el Id
+            </summary>
+            <param name="id">id del log</param>
+            <returns>Log encontrado</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Controllers.ProductosController">
+            <summary>
+            Controlador de productos
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.#ctor(AmericaVirtualAPI.Services.IRepository{AmericaVirtualAPI.Models.Producto},Microsoft.AspNetCore.Mvc.IUrlHelper)">
+            <summary>
+            Constructor del controlador de productos
+            </summary>
+            <param name="productoRepository"></param>
+            <param name="urlHelper"></param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.GetProductos(AmericaVirtualAPI.Helpers.EntitiesResourceParameters)">
+            <summary>
+            Obtener productos paginados
+            </summary>
+            <param name="resourceParameters">Parametros para paginación</param>
+            <returns>Lista de productos</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.Post(AmericaVirtualAPI.Models.Producto)">
+            <summary>
+            Alta de producto
+            </summary>
+            <param name="value">Nuevo producto</param>
+            <returns>Producto insertado</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.GetProducto(System.Int64)">
+            <summary>
+            Obtener producto dado su Id
+            </summary>
+            <param name="id">Id del producto</param>
+            <returns>Producto encontrado</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.UpdateProducto(System.Int64,AmericaVirtualAPI.Models.Producto)">
+            <summary>
+            Actualización de datos del producto
+            </summary>
+            <param name="id">Id del producto</param>
+            <param name="value">Datos del producto a actualizar</param>
+            <returns>Producto actualizado</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.ProductosController.CreateResourceUri(AmericaVirtualAPI.Helpers.EntitiesResourceParameters,Library.API.Helpers.ResourceUriType)">
+            <summary>
+            metodo de creacion de urls para paginado prev y next
+            </summary>
+            <param name="resourceParameters">Recursos del parametro</param>
+            <param name="type">Tipo de uri</param>
+            <returns>retorna link de paginado</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Controllers.UsuariosController">
+            <summary>
+            Controlador de Usuarios
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.UsuariosController.#ctor(AmericaVirtualAPI.Services.IUserRepository)">
+            <summary>
+            constructor del controlador
+            </summary>
+            <param name="usuarioRepository">repositorio</param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.UsuariosController.GetLogin(AmericaVirtualAPI.Models.Usuario)">
+            <summary>
+            login de usuario
+            </summary>
+            <param name="usuario">datos del form de login</param>
+            <returns>datos del usuario</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.UsuariosController.GetUsuario(System.Int64)">
+            <summary>
+            Obtiene detalle de usuario dado el Id
+            </summary>
+            <param name="id">Id del usuario</param>
+            <returns>Detalle del usuario</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Controllers.UsuariosController.UpdateUsuario(System.Int64,AmericaVirtualAPI.Models.Usuario)">
+            <summary>
+            Actualiza datos del usuario
+            </summary>
+            <param name="id">Id del usuario</param>
+            <param name="value">Datos del usuario a actualizar</param>
+            <returns>Usuario actualizado</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Helpers.EntitiesResourceParameters">
+            <summary>
+            clase de manejo de los parametros del llamado a la API, paginado y filtrado
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.Helpers.EntitiesResourceParameters.maxPageSize">
+            <summary>
+            maximo tamaño de pagina
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.EntitiesResourceParameters.PageNumber">
+            <summary>
+            nupero de pagina
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.Helpers.EntitiesResourceParameters._pageSize">
+            <summary>
+            tamaño de pagina por defecto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.EntitiesResourceParameters.PageSize">
+            <summary>
+            Tamaño de pagina
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Helpers.PagedList`1">
+            <summary>
+            clase para el manejo y devolucion de informacion de paginado mediante metadata
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.CurrentPage">
+            <summary>
+            pagina actual
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.TotalPages">
+            <summary>
+            Total de paginas del conjunto de datos
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.PageSize">
+            <summary>
+            tamaño de pagina
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.TotalCount">
+            <summary>
+            Cantidad total de elementos
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.HasPrevious">
+            <summary>
+            Indica si tiene pagina previa
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Helpers.PagedList`1.HasNext">
+            <summary>
+            indica si tiene una pagina siguiente
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Helpers.PagedList`1.#ctor(System.Collections.Generic.List{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            constructor
+            </summary>
+            <param name="items">lista de elementos</param>
+            <param name="count">cantidad de elementos</param>
+            <param name="pageNumber">numero de pagina</param>
+            <param name="pageSize">tamaño de pagina</param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Helpers.PagedList`1.Create(System.Linq.IQueryable{`0},System.Int32,System.Int32)">
+            <summary>
+            devuelve el conjunto de datos paginado segun lo solicitado
+            </summary>
+            <param name="source">source</param>
+            <param name="pageNumber">numero de pagona</param>
+            <param name="pageSize">tamaño de pagina</param>
+            <returns>lista de elemntos segun paginado</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Models.ApiContext">
+            <summary>
+            Db Context de la aplicacion
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Models.ApiContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{AmericaVirtualAPI.Models.ApiContext})">
+            <summary>
+            constructor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.ApiContext.Productos">
+            <summary>
+            Dataset de productos
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.ApiContext.Usuarios">
+            <summary>
+            Dataset de usuarios
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.ApiContext.Logs">
+            <summary>
+            Dataset de Logs
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Models.Entidad">
+            <summary>
+            Clase de la que deben heredar los modelos para hacer uso del repository
+            (propiedades comunes entre modelos)
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Entidad.Id">
+            <summary>
+            Id de los modelos
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Entidad.FechaCreacion">
+            <summary>
+            Fecha de creacion del registro
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Models.Log">
+            <summary>
+            Modelo para log de acciones por partes del usuario 
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Log.UsuarioId">
+            <summary>
+            Id del usuario que realiza la accion
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Log.Accion">
+            <summary>
+            accion que realiza el usuario
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Log.Descripcion">
+            <summary>
+            Descripcion de la accion a logear
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Log.FechaActual">
+            <summary>
+            fecha de la accion
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Models.Producto">
+            <summary>
+            Datos del producto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Producto.Titulo">
+            <summary>
+            Titulo principal del producto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Producto.Descripcion">
+            <summary>
+            Descripcion del producto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Producto.Estado">
+            <summary>
+            estado de vigencia del producto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Producto.Precio">
+            <summary>
+            precio del producto
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Producto.UrlImagen">
+            <summary>
+            Imagen principal del producto
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Models.Usuario">
+            <summary>
+            Datos del usuario
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Usuario.Nombre">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Usuario.Apellido">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Usuario.FecNacimiento">
+            <summary>
+            fecha de nacimiento
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Usuario.Email">
+            <summary>
+            Email de login
+            </summary>
+        </member>
+        <member name="P:AmericaVirtualAPI.Models.Usuario.Pass">
+            <summary>
+            pass
+            </summary>
+        </member>
+        <member name="T:AmericaVirtualAPI.Services.IRepository`1">
+            <summary>
+            interface del patron repository
+            </summary>
+            <typeparam name="T">clase parametrizable</typeparam>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IRepository`1.GetAll(AmericaVirtualAPI.Helpers.EntitiesResourceParameters)">
+            <summary>
+            Obtener lista de elementos segun parametros
+            </summary>
+            <param name="todosResourceParameters">parametros de devolucion</param>
+            <returns>lista paginada de elementos</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IRepository`1.GetById(System.Int64)">
+            <summary>
+            obtiene elemento dado el Id
+            </summary>
+            <param name="id"></param>
+            <returns>elemento encontrado</returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IRepository`1.Add(`0)">
+            <summary>
+            Agrega nuevo elemento a la bd
+            </summary>
+            <param name="Item"></param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IRepository`1.Update(`0)">
+            <summary>
+            Actualiza elemento en la bd
+            </summary>
+            <param name="Item"></param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IRepository`1.Save">
+            <summary>
+            guarda la transaccion
+            </summary>
+            <returns>exito o fail</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Services.IUserRepository">
+            <summary>
+            repositorio de usuarios
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.IUserRepository.GetUsuarioByLogin(System.String,System.String)">
+            <summary>
+            Obtener usuario dado los datos de login
+            </summary>
+            <param name="email">email del usuario</param>
+            <param name="pass">contraseña</param>
+            <returns>detalle del usuario</returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Services.Repository`1">
+            <summary>
+            implemetacion de los metodos de la API genericos
+            </summary>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.Repository`1.GetAll(AmericaVirtualAPI.Helpers.EntitiesResourceParameters)">
+            <summary>
+            obtiene el listado de entidad segun la paginacion
+            </summary>
+            <param name="itemResourceParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.Repository`1.Add(`0)">
+            <summary>
+            metodo que agrega una nueva entidad a la coleccion
+            </summary>
+            <param name="entidad"></param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.Repository`1.GetById(System.Int64)">
+            <summary>
+            obtiene la entidad dado el id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.Repository`1.Update(`0)">
+            <summary>
+            actualiza la entidad dada
+            </summary>
+            <param name="entidad"></param>
+        </member>
+        <member name="M:AmericaVirtualAPI.Services.Repository`1.Save">
+            <summary>
+            consulta si se registró la transaccion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AmericaVirtualAPI.Services.UserRepository">
+            <summary>
+            implemetacion del repositorio de usuario
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.EndpointDescription">
+            <summary>
+            <para>America virtual API v1</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.EndpointUrl">
+            <summary>
+            <para>/swagger/v1/swagger.json</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.ContactName">
+            <summary>
+            <para>Nicolas Leguizamon</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.ContactUrl">
+            <summary>
+            <para>https://www.linkedin.com/in/francisco-nicolas-leguizamon/</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.DocNameV1">
+            <summary>
+            <para>v1</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.DocInfoTitle">
+            <summary>
+            <para>America Virtual API</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.DocInfoVersion">
+            <summary>
+            <para>v1</para>
+            </summary>
+        </member>
+        <member name="F:AmericaVirtualAPI.SwaggerConfiguration.DocInfoDescription">
+            <summary>
+            <para>America Virtual Api - Web API in ASP.NET Core 2</para>
+            </summary>
+        </member>
+        <member name="T:Library.API.Helpers.ResourceUriType">
+            <summary>
+            recursos de paginado
+            </summary>
+        </member>
+    </members>
+</doc>

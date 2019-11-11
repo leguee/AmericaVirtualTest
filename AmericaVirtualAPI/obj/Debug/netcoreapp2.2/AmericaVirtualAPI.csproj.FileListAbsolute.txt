@@ -1,0 +1,15 @@
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.deps.json
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.runtimeconfig.json
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.runtimeconfig.dev.json
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.dll
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.csproj.CoreCompileInputs.cache
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.RazorAssemblyInfo.cache
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.RazorAssemblyInfo.cs
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.AssemblyInfoInputs.cache
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.AssemblyInfo.cs
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.RazorTargetAssemblyInfo.cache
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.pdb
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.csprojAssemblyReference.cache
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.dll
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\obj\Debug\netcoreapp2.2\AmericaVirtualAPI.pdb
+C:\Users\legui\source\repos\AmericaVirtualAPI\AmericaVirtualAPI\bin\Debug\netcoreapp2.2\AmericaVirtualAPI.xml
